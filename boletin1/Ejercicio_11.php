@@ -14,6 +14,7 @@
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" />
 
+    <br><br>
     <input type="submit" value="Saluda">
   </form>
 </body>
