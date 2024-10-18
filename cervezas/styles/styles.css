@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #005cbf;
+}
+
+h4 {
+  text-align: center;
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #0085FF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #005cbf;
+}
+
+.br {
+  margin-bottom: 20px;
+}
+
+/* Alineación de radios y checkboxes */
+.radio-group, .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.checkbox-group label, .radio-group label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"], .radio-group input[type="radio"] {
+  margin: 10px 0 10px 10px; /* Ajusta el margen según sea necesario */
+  vertical-align: middle; /* Asegura la alineación vertical */
+}
+
+/* Ajustes para alineación de elementos */
+.form-group {
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.error-group {
+  max-width: 700px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
