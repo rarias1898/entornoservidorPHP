@@ -9,6 +9,8 @@
 <body>
   <h1>Insercion de Cervezas</h1>
   <?php
+    include 'errores.php';
+
     $tipoCerveza = $_REQUEST['tipoCerveza'];
     $tipo = $_REQUEST['tipo'];
     $cantidadNeta = $_REQUEST['cantidadNeta'];
@@ -17,13 +19,6 @@
     $consumoPreferente = $_REQUEST['consumoPreferente'];
     $alergenos = $_REQUEST['aler'];
     $observaciones = $_REQUEST['observaciones'];
-
-    if(file_exists("upload/" . $_FILES['imagen']['name'])) {
-      echo $_FILES['imagen']['name'] . " ya existe. ";
-    } else {
-      move_uploaded_file($_FILES['imagen']['tmp_name'], "upload/" . $_FILES['imagen']['name']);
-      echo "Almacenado en: " . "upload/" . $_FILES['imagen']['name'];
-    }
 
     if(empty($marca) || empty($advertencia) || empty($consumoPreferente) || empty($alergenos)) {
       ?>
@@ -41,6 +36,16 @@
       </div>
       <?php
     } else {
+      if ($_FILES["imagen"]["error"] > 0) {
+        // echo "Error: " . $msgError[$_FILES["imagen"]["error"]] . "<br />";
+      } else {
+        if (file_exists("upload/" . $_FILES['imagen']['name'])) {
+          echo $_FILES['imagen']['name'] . " ya existe. ";
+        } else {
+          $ruta_imagen = "upload/" . $_FILES['imagen']['name'];
+          move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_imagen);
+        }
+      }
       ?>
         <div class="error-group">
           <ul>
@@ -52,7 +57,10 @@
             <li>Fecha de consumo preferente: <?php echo $consumoPreferente ?></li>
             <li>Alergenos: <?php echo implode(' - ', $alergenos) ?></li>
             <li>Observaciones: <?php echo $observaciones ?></li>
+            <li>Imagen: <?php echo $msgError[$_FILES["imagen"]["error"]] ?></li>
           </ul>
+
+          <img src="<?php echo $ruta_imagen ?>" alt="">
           
           <br><br>
           <a href="index.php">[ Insertar otra ]</a>
