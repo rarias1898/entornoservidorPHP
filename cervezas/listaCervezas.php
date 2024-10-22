@@ -18,6 +18,13 @@
     $alergenos = $_REQUEST['aler'];
     $observaciones = $_REQUEST['observaciones'];
 
+    if(file_exists("upload/" . $_FILES['imagen']['name'])) {
+      echo $_FILES['imagen']['name'] . " ya existe. ";
+    } else {
+      move_uploaded_file($_FILES['imagen']['tmp_name'], "upload/" . $_FILES['imagen']['name']);
+      echo "Almacenado en: " . "upload/" . $_FILES['imagen']['name'];
+    }
+
     if(empty($marca) || empty($advertencia) || empty($consumoPreferente) || empty($alergenos)) {
       ?>
       <div class="error-group">

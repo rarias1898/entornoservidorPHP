@@ -11,7 +11,7 @@
 
   <h4>Introduzca los datos de las Cervezas:</h4>
 
-  <form action="listaCervezas.php" method="post">
+  <form action="listaCervezas.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <label for="tipoCerveza">Tipo de Cerveza: </label>
       <select name="tipoCerveza" id="">
@@ -113,6 +113,11 @@
     <div class="form-group">
       <label for="observaciones">Observaciones: </label>
       <textarea name="observaciones" id=""></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="imagen">Imagen: </label>
+      <input type="file" name="imagen" id="miImagen">
     </div>
 
     <input type="submit" value="Insertar Cerveza">
