@@ -17,10 +17,9 @@
     $marca = $_REQUEST['marca'];
     $advertencia = $_REQUEST['advertencia'];
     $consumoPreferente = $_REQUEST['consumoPreferente'];
-    $alergenos = $_REQUEST['aler'];
     $observaciones = $_REQUEST['observaciones'];
 
-    if(empty($marca) || empty($advertencia) || empty($consumoPreferente) || empty($alergenos)) {
+    if(empty($marca) || empty($advertencia) || empty($consumoPreferente) || empty($_REQUEST['aler'])) {
       ?>
       <div class="error-group">
         <h3>No se ha podido realizar la inserción debido a los siguentes errores: </h3>
@@ -36,8 +35,9 @@
       </div>
       <?php
     } else {
+      $alergenos = $_REQUEST['aler'];
       if ($_FILES["imagen"]["error"] > 0) {
-        // echo "Error: " . $msgError[$_FILES["imagen"]["error"]] . "<br />";
+        $fileError += "Error: " . $msgError[$_FILES["imagen"]["error"]] . "<br />";
       } else {
         if (file_exists("upload/" . $_FILES['imagen']['name'])) {
           echo $_FILES['imagen']['name'] . " ya existe. ";

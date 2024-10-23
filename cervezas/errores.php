@@ -1,3 +1,4 @@
+
 <?php
 $msgError = array(
     0 => "El fichero se subió con éxito",
@@ -9,3 +10,5 @@ $msgError = array(
     7 => "Fallo al escribir el fichero al disco",
     8 => "La subida del fichero fue detenida por la extensión"
 );
+
+$hola = "Ana";
