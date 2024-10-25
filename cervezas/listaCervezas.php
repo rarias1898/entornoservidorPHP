@@ -28,6 +28,7 @@
           <li>Es obligatorio advertencia sobre el consumo de alcohol</li>
           <li>No ha introducido fecha</li>
           <li>Es obligatorio incluir alergenos</li>
+          <li><?php echo $hola ?></li> 
         </ul>
   
         <br><br>
@@ -37,7 +38,8 @@
     } else {
       $alergenos = $_REQUEST['aler'];
       if ($_FILES["imagen"]["error"] > 0) {
-        $fileError += "Error: " . $msgError[$_FILES["imagen"]["error"]] . "<br />";
+        // $fileError += "Error: " . $msgError[$_FILES["imagen"]["error"]] . "<br />";
+        // echo $msgError[$_FILES['imagen']['error']];
       } else {
         if (file_exists("upload/" . $_FILES['imagen']['name'])) {
           echo $_FILES['imagen']['name'] . " ya existe. ";
@@ -58,6 +60,7 @@
             <li>Alergenos: <?php echo implode(' - ', $alergenos) ?></li>
             <li>Observaciones: <?php echo $observaciones ?></li>
             <li>Imagen: <?php echo $msgError[$_FILES["imagen"]["error"]] ?></li>
+            <li> <?php echo $_FILES['imagen']['type'] ?> </li>
           </ul>
 
           <img src="<?php echo $ruta_imagen ?>" alt="">

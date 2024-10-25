@@ -11,4 +11,4 @@ $msgError = array(
     8 => "La subida del fichero fue detenida por la extensión"
 );
 
-$hola = "Ana";
+$hola = "Esto es una prueba de error";
