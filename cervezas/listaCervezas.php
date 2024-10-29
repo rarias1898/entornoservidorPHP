@@ -60,7 +60,6 @@
             <li>Alergenos: <?php echo implode(' - ', $alergenos) ?></li>
             <li>Observaciones: <?php echo $observaciones ?></li>
             <li>Imagen: <?php echo $msgError[$_FILES["imagen"]["error"]] ?></li>
-            <li> <?php echo $_FILES['imagen']['type'] ?> </li>
           </ul>
 
           <img src="<?php echo $ruta_imagen ?>" alt="">
