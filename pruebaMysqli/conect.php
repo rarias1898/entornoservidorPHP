@@ -1,6 +1,6 @@
 <?php
 // MySQLi connection
-$mysqli = new mysqli("127.0.0.1", "root", "root", "hola");
+$mysqli = new mysqli("127.0.0.1", "root", "", "prueba");
 
 // Check connection
 if ($mysqli->connect_error) {
@@ -8,7 +8,7 @@ if ($mysqli->connect_error) {
 }
 
 // SQL to select from table
-$sql = "SELECT * FROM prueba";
+$sql = "SELECT * FROM users";
 
 // Execute query
 $result = $mysqli->query($sql);
@@ -19,7 +19,7 @@ if ($result) {
     if ($result->num_rows > 0) {
         // Output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "ID: " . $row["id"] . " - Name: " . $row["name"] . "<br>";
+            echo "ID: " . $row["id"] . " - Name: " . $row["nombre"] . "<br>";
         }
     } else {
         echo "No results found";
