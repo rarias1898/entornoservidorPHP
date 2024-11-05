@@ -9,6 +9,5 @@
   <?php
   include "conect.php";
   ?>
-  <h1>Hola</h1>
 </body>
 </html>
