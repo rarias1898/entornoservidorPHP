@@ -1,6 +1,10 @@
 <?php
 // MySQLi connection
-$mysqli = new mysqli("127.0.0.1", "root", "root", "hola");
+try {
+    $mysqli = new mysqli("127.0.0.1", "root", "root", "hola");
+} catch (mysqli_sql_exception $e) {
+    die("Connection failed: " . $e->getMessage());
+}
 
 // Check connection
 if ($mysqli->connect_error) {
@@ -8,7 +12,7 @@ if ($mysqli->connect_error) {
 }
 
 // SQL to select from table
-$sql = "SELECT * FROM prueba";
+$sql = "SELECT * FROM user";
 
 // Execute query
 $result = $mysqli->query($sql);
@@ -19,7 +23,7 @@ if ($result) {
     if ($result->num_rows > 0) {
         // Output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "ID: " . $row["id"] . " - Name: " . $row["name"] . "<br>";
+            echo "ID: " . $row["id"] . " - Name: " . $row["nombre"] . "<br>";
         }
     } else {
         echo "No results found";
@@ -27,6 +31,7 @@ if ($result) {
 } else {
     echo "Error executing query: " . $mysqli->error;
 }
+
 
 // Close connection
 $mysqli->close();
