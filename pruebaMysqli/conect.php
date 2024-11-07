@@ -1,6 +1,14 @@
 <?php
 // MySQLi connection
+<<<<<<< HEAD
+try {
+    $mysqli = new mysqli("127.0.0.1", "root", "root", "hola");
+} catch (mysqli_sql_exception $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+=======
 $mysqli = new mysqli("127.0.0.1", "root", "", "prueba");
+>>>>>>> e1a3d1939d87a38e303809be72e7444b69d088b8
 
 // Check connection
 if ($mysqli->connect_error) {
@@ -8,7 +16,11 @@ if ($mysqli->connect_error) {
 }
 
 // SQL to select from table
+<<<<<<< HEAD
+$sql = "SELECT * FROM user";
+=======
 $sql = "SELECT * FROM users";
+>>>>>>> e1a3d1939d87a38e303809be72e7444b69d088b8
 
 // Execute query
 $result = $mysqli->query($sql);
@@ -27,6 +39,7 @@ if ($result) {
 } else {
     echo "Error executing query: " . $mysqli->error;
 }
+
 
 // Close connection
 $mysqli->close();
