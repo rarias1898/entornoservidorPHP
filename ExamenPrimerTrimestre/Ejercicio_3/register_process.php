@@ -23,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
+    $contraseña = password_hash($contraseña, PASSWORD_DEFAULT);
+
     $query = "INSERT INTO usuarios (DNI, Nombre, Apellidos, Usuario, Contraseña) VALUES ('$dni', '$nombre', '$apellidos', '$usuario', '$contraseña')";
     
     if ($connection->query($query) === TRUE) {
