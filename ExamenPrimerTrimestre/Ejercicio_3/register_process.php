@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // con pashword_hash() encriptamos la contraseña
-    $contraseña = password_hash($contraseña, PASSWORD_DEFAULT);
+    // $contraseña = password_hash($contraseña, PASSWORD_DEFAULT);
 
     // Insertamos el usuario en la base de datos
     $query = "INSERT INTO usuarios (DNI, Nombre, Apellidos, Usuario, Contraseña) VALUES ('$dni', '$nombre', '$apellidos', '$usuario', '$contraseña')";
