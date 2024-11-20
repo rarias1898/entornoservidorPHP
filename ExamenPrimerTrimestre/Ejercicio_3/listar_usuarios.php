@@ -1,6 +1,8 @@
 <?php
+// Incluyo el archivo de configuración donde se encuentra la conexión a la base de datos
 require 'config.php';
 
+// Realizo la consulta para obtener todos los usuarios
 $sql = "SELECT id, DNI, Nombre, Apellidos FROM usuarios";
 $result = $connection->query($sql);
 

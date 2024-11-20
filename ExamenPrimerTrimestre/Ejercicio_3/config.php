@@ -1,3 +1,4 @@
+<!-- Archivo utilizado para crear la conexxión con la base de datos, será incluido en cada archivo que lo necesite. -->
 <?php
   $host = "127.0.0.1:3307";
   $user = "root";

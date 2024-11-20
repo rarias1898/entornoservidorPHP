@@ -19,19 +19,23 @@
     </style>
 </head>
 <body>
+    <!-- Página principal de la aplicación -->
     <h1>Bienvenido a la página principal</h1>
     <p>Has iniciado sesión correctamente.</p>
 
+    <!-- Botón para listar los usuarios de la base de datos -->
     <form action="home.php" method="post">
         <button type="submit" name="mostrar_usuarios">Mostrar Usuarios</button>
     </form>
 
+    <!-- Boton para cerrar sesión, redirección al login -->
     <form action="index.php" method="post">
         <button type="submit" name="cerrar_sesion">Cerrar Sesión</button>
     </form>
         
     <?php
         if (isset($_POST['mostrar_usuarios'])) {
+            // Aquí llamo al archivo donde esta la query para listar los usuarios
             include 'listar_usuarios.php';
         }
     ?>

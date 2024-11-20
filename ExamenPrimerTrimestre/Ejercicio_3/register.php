@@ -5,6 +5,7 @@
     <title>Registro</title>
 </head>
 <body>
+    <!-- Formulario de registro de usuarios -->
     <h2>Registro nuevo usuario</h2>
     <form action="register_process.php" method="post">
         <label for="dni">DNI</label>

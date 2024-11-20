@@ -6,6 +6,7 @@
     <title>Ejercicio 3</title>
   </head>
   <body>
+    <!-- Página que contiene el formulario para iniciar sesión -->
     <h1>REGISTRO DE USUARIOS - IDENTIFICACIÓN 1</h1>
     <form action="login.php" method="post">
       <label for="usuario">Nombre</label>
