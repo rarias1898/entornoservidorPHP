@@ -7,20 +7,14 @@
     <link rel="stylesheet" href="./styles/index.css">
   </head>
   <body>
-    <header>
-      <img src="./images/logo.png" alt="">
-      <div class="button-group">
-        <button>Login</button>
-        <button>Signup</button>
-      </div>
-    </header>
+    <?php
+      include "./views/header.php"
+    ?>
     <main>
       <h1>Aquí no vendemos Cruzcampo!</h1>
     </main>
-    <footer>
-      <h2>Este es el footer</h2>
-      <hr>
-      <small>2025 Entorno servidor | Ángel Arias</small>
-    </footer>
+    <?php
+      include "./views/footer.php"
+    ?>
   </body>
 </html>
