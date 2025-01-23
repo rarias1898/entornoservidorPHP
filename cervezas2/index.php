@@ -8,13 +8,13 @@
   </head>
   <body>
     <?php
-      include "./views/header.php"
+      include "./includes/header.php";
     ?>
     <main>
       <h1>Aquí no vendemos Cruzcampo!</h1>
     </main>
     <?php
-      include "./views/footer.php"
+      include "./includes/footer.php";
     ?>
   </body>
 </html>
