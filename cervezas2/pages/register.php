@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
-    <h1>Registro de Usuario</h1>
-    <form action="../actions/register_action.php" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
-        <br>
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name" >
-        <br>
-        <label for="password">Contraseña:</label>
-        <input type="password" name="password" id="password" >
-        <br>
-        <label for="age">Edad:</label>
-        <input type="number" name="age" id="age" >
-        <br>
-        <label for="role">Rol:</label>
-        <select name="role" id="role" >
-            <option value="usuario">Usuario Normal</option>
-            <option value="admin">Admin</option>
-        </select>
-        <br><br>
-        <button type="submit">Registrar</button>
-    </form>
+    <main class="container">
+        <div class="login-form">
+            <h1>Registro de Usuario</h1>
+            <form action="../actions/register_action.php" method="POST">
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="input-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" >
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" name="password" id="password" >
+                </div>
+                <div class="input-group">
+                    <label for="age">Edad:</label>
+                    <input type="number" name="age" id="age" >
+                </div>
+                <div class="input-group">
+                    <label for="role">Rol:</label>
+                    <select name="role" id="role" >
+                        <option value="usuario">Usuario</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button type="submit">Registrar</button>
+                <a href="../index.php">Volver</a>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

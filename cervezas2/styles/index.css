@@ -1,9 +1,293 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 * {
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    --color-background: #121212;
+    --color-gold: #caa974;
+}
+
+/* body {
+    background-color: #f4f4f4;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.container {
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-container {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    background-color: #0085ff;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.producto-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30rem;
+}
+
+/* Título del formulario */
+.producto-form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Estilos para los grupos de entrada */
+.input-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para los labels de los campos */
+.producto-form .input-group label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para los inputs y textareas */
+.producto-form .input-group input, 
+.producto-form .input-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Estilo para el textarea */
+.producto-form .input-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Estilos para el botón de submit */
+.producto-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0085ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+/* Efecto hover para el botón */
+.producto-form button:hover {
+  background-color: #005bb5;
+}
+
+/* Estilos para el botón cuando se hace foco en él */
+.producto-form button:focus {
+  outline: none;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Estilos para las zonas de admin y usuario */
+.home-container ul {
+  list-style-type: none;
   padding: 0;
-  font-family: "Ubuntu", serif;
+  margin: 0;
+}
+
+.home-container li {
+  margin: 1rem 0;
+}
+
+.home-container a {
+  text-decoration: none;
+  color: #0085ff;
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.8rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-container a:hover {
+  background-color: #005bb5;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.home-container a:focus {
+  outline: none;
+}
+
+/* Estilo para el área de productos */
+.home-container .productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.home-container .producto-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.home-container .producto-card:hover {
+  transform: scale(1.05);
+}
+
+.home-container .producto-imagen img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home-container .producto-info {
+  padding: 15px;
+}
+
+.home-container .producto-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.home-container .producto-info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+/* Estilo cuando no se tiene acceso */
+.home-container p {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 header {
@@ -11,51 +295,73 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #121212;
-  height: 15rem;
+  padding: 1rem 2rem;
+  color: #fff;
 }
 
 header img {
-  margin-left: 1rem;
-  width: 200px;
+  max-width: 150px;
   height: auto;
 }
 
-button {
-  cursor: pointer;
-}
-
-.button-group {
+.header .button-group {
   display: flex;
-  gap: 2rem;
-  margin-right: 1rem;
+  align-items: center;
+  gap: 1rem;
 }
 
-.button-group button {
-  width: 5rem;
-  height: 2.5rem;
+header span {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+header .button-group a {
+  text-decoration: none;
+}
+
+header .button-group button {
+  padding: 0.6rem 1.2rem;
+  background-color: #0085FF;
   border: none;
-  border-radius: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button-group button:hover {
-  background-color: #cca874;
+header .button-group button:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
 }
 
-main {
-  /* margin-top: 5rem; */
-  height: 100vh;
+header .button-group button:focus {
+  outline: none;
+}
+
+.admin-control {
+  margin-top: .5rem;
   display: flex;
   justify-content: center;
+  gap: .5rem;
+}
+
+select {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 16px; 
   background-color: #fff;
+  color: #333;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
 }
 
-main h1 {
-  margin-top: 5rem;
-  text-decoration: underline;
-}
-
-footer {
-  background-color: #121212;
-  color: #fff;
-  height: 10rem;
+option {
+  padding: 10px;
+  font-size: 16px;
 }
