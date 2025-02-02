@@ -30,7 +30,7 @@ $result = $conn->query($sql);
                 <div class="admin-control">
                     <?php if ($user_role === 'admin'): ?>
                         <a href="../actions/borrar_producto_action.php?id=<?php echo $row['id']; ?>">Borrar</a>
-                        <a href="#">Editar</a>
+                        <a href="../pages/editar_producto.php?id=<?php echo $row['id']; ?>">Editar</a>
                     <?php endif ?>
 
                     <!-- <?php if ($user_role === 'admin' || $user_role === ''): ?>
