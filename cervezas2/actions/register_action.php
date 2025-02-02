@@ -1,17 +1,13 @@
 <?php
-// Incluir el archivo de conexión
 require_once '../includes/config.php';
 
-// Verificar si se envió el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener los datos del formulario
     $email = trim($_POST['email']);
     $name = trim($_POST['name']);
     $password = trim($_POST['password']);
     $age = (int)$_POST['age'];
     $role = trim($_POST['role']);
 
-    // Validar que no haya campos vacíos
     if (empty($email) || empty($name) || empty($password) || empty($age) || empty($role)) {
         die("Todos los campos son obligatorios.");
     }
@@ -42,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error al registrar el usuario: " . $conn->error;
     }
 
-    // Cerrar la conexión
     $stmt->close();
     $conn->close();
 } else {

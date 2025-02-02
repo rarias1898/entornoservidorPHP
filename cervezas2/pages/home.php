@@ -39,6 +39,6 @@ $user_role = $_SESSION['role'];
         <?php include ('../includes/productos.php'); ?>
     </main>
 
-    <!-- <?php include('../includes/footer.php') ?> -->
+    <?php include('../includes/footer.php') ?>
 </body>
 </html>

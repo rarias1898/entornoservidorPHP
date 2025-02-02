@@ -1,7 +1,7 @@
 <?php
 require_once 'config.php';
 
-// Consultar productos
+// Consultar todos productos
 $sql = "SELECT * FROM productos ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
@@ -32,10 +32,15 @@ $result = $conn->query($sql);
                         <a href="../actions/borrar_producto_action.php?id=<?php echo $row['id']; ?>">Borrar</a>
                         <a href="../pages/editar_producto.php?id=<?php echo $row['id']; ?>">Editar</a>
                     <?php endif ?>
-
-                    <!-- <?php if ($user_role === 'admin' || $user_role === ''): ?>
-                        <a href="#">Comprar</a>
-                    <?php endif; ?> -->
+                    
+                    <?php if ($user_role === ''): ?>
+                    <form method="POST" action="../actions/agregar_al_carrito_action.php">
+                        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                        <input type="hidden" name="denominacion" value="<?php echo $row['denominacion']; ?>">
+                        <input type="hidden" name="precio" value="<?php echo $row['precio']; ?>">
+                        <button type="submit">Añadir al carrito</button>
+                    </form>
+                    <?php endif ?>
                 </div>
             </div>
         </div>

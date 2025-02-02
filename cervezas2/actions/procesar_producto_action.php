@@ -4,7 +4,6 @@ require_once '../includes/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Recibir los datos del formulario
     $denominacion = $conn->real_escape_string($_POST['denominacion']);
     $marca = $conn->real_escape_string($_POST['marca']);
     $tipo = $conn->real_escape_string($_POST['tipo']);
@@ -15,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $precio = floatval($_POST['precio']);
     $observaciones = $conn->real_escape_string($_POST['observaciones']);
 
-    // Manejo de la imagen
+    // Para las imágenes.
     $imagenRuta = null;
     if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
         $directorioSubida = "../uploads/";
@@ -42,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    // Cerrar conexión
     $conn->close();
 } else {
     echo "Método de solicitud no válido.";

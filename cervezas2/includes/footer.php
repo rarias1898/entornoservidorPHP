@@ -1,3 +1,3 @@
 <footer>
-      <small>2025 Entorno servidor | Ángel Arias</small>
+    <p>&copy; <?php echo date("Y"); ?> Tienda de Cervezas. Todos los derechos reservados.</p>
 </footer>
