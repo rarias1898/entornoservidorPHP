@@ -1,5 +1,7 @@
+<script src="../js/index.js"></script>
 <?php
 require_once 'config.php';
+
 
 // Consultar todos productos
 $sql = "SELECT * FROM productos ORDER BY id DESC";
@@ -29,7 +31,7 @@ $result = $conn->query($sql);
                 <p><strong>Observaciones:</strong> <?php echo htmlspecialchars($row['observaciones']); ?></p>
                 <div class="admin-control">
                     <?php if ($user_role === 'admin'): ?>
-                        <a href="../actions/borrar_producto_action.php?id=<?php echo $row['id']; ?>">Borrar</a>
+                        <a href="#" onclick="confirmarBorrado(<?php echo $row['id']; ?>)">Borrar</a>
                         <a href="../pages/editar_producto.php?id=<?php echo $row['id']; ?>">Editar</a>
                     <?php endif ?>
                     
