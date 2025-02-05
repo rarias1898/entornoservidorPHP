@@ -52,8 +52,9 @@
                     <textarea id="observaciones" name="observaciones"></textarea>
                 </div>
                 <button type="submit">Añadir Producto</button>
-                <a href="./home.php">Volver</a>
             </form>
+            <br>
+            <a href="./home.php"><button>Volver</button></a>
         </div>
     </main>
 </body>

@@ -19,8 +19,9 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit">Iniciar Sesión</button>
-                <a href="../index.php">Volver</a>
             </form>
+            <br>
+            <a href="../index.php"><button>Volver</button></a>
         </div>
     </main>
 </body>

@@ -35,8 +35,9 @@
                     </select>
                 </div>
                 <button type="submit">Registrar</button>
-                <a href="../index.php">Volver</a>
             </form>
+            <br>
+            <a href="../index.php"><button>Volver</button></a>
         </div>
     </main>
 </body>
