@@ -275,17 +275,19 @@ input {
 .home-container .producto-info h3 {
   margin: 0 0 10px;
   font-size: 1.2em;
+  text-align: center;
 }
 
 .home-container .producto-info p {
   margin: 5px 0;
   font-size: 0.9em;
+  text-align: left;
 }
 
 /* Estilo cuando no se tiene acceso */
 .home-container p {
   font-size: 1.2rem;
-  color: #e74c3c;
+  color: black;
   text-align: center;
   margin-top: 2rem;
 }

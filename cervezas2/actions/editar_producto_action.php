@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $marca = trim($_POST['marca']);
     $tipo = trim($_POST['tipo']);
     $formato = trim($_POST['formato']);
-    $tamano = trim($_POST['tamano']);
+    $tamano = trim($_POST['tamaño']);
     $precio = floatval($_POST['precio']);
 
     $sql = "UPDATE productos SET 

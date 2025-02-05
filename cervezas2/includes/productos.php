@@ -29,6 +29,8 @@ $result = $conn->query($sql);
                 <p><strong>Fecha de consumo:</strong> <?php echo htmlspecialchars($row['fecha_consumo']); ?></p>
                 <p><strong>Precio:</strong> <?php echo number_format($row['precio'], 2); ?> €</p>
                 <p><strong>Observaciones:</strong> <?php echo htmlspecialchars($row['observaciones']); ?></p>
+                <br>
+                <hr>
                 <div class="admin-control">
                     <?php if ($user_role === 'admin'): ?>
                         <a href="#" onclick="confirmarBorrado(<?php echo $row['id']; ?>)">Borrar</a>
