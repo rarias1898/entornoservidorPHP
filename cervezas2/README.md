@@ -16,3 +16,5 @@ config.php ==> $host = 'localhost:puerto'
 ```
 bbdd/cerveceria.sql
 ```
+<hr>
+<small>Trabajo realiado por Ángel Arias Domínguez</small>
