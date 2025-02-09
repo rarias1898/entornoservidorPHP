@@ -406,3 +406,9 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+table {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}

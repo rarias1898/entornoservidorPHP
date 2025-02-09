@@ -31,7 +31,7 @@
                     <label for="role">Rol:</label>
                     <select name="role" id="role" >
                         <option value="usuario">Usuario</option>
-                        <option value="admin">Admin</option>
+                        <!-- <option value="admin">Admin</option> -->
                     </select>
                 </div>
                 <button type="submit">Registrar</button>

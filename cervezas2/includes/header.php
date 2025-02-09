@@ -8,6 +8,7 @@
             <?php elseif ($_SESSION['role'] === ''): ?>
                 <a href="../pages/carrito.php"><button>Carrito</button></a>
             <?php endif; ?>
+            <a href="../pages/buscar.php"><button>Buscar</button></a>
             <a href="../includes/logout.php"><button>Cerrar sesión</button></a>
         <?php else: ?>
             <a href="pages/login.php"><button>Iniciar sesión</button></a>

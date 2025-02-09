@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 02-02-2025 a las 23:43:35
+-- Tiempo de generación: 10-02-2025 a las 00:46:25
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -50,8 +50,7 @@ CREATE TABLE `productos` (
 INSERT INTO `productos` (`id`, `denominacion`, `marca`, `tipo`, `formato`, `tamaño`, `alergenos`, `fecha_consumo`, `precio`, `imagen`, `observaciones`, `created_at`, `updated_at`) VALUES
 (8, 'Chimai', 'Chimai', 'Trapense', 'Botellin', '1', 'cebada, etc, etc', '2025-02-02', 3.00, '../uploads/1738199694_cv.png', 'lorem lorem lorem', '2025-01-30 01:14:54', '2025-02-02 20:55:33'),
 (9, 'Pilsner Urquell', 'Pilsner Urquell', 'Pilsner', 'Botellin', '1', 'Cereales', '2025-01-24', 2.00, '../uploads/1738200513_cv2.png', 'adgadgadg', '2025-01-30 01:28:33', '2025-02-02 20:49:57'),
-(10, 'Heineken', 'Heineken', 'Lager', 'Lata', '1/2', 'Cereales', '2025-02-22', 1.80, '../uploads/1738463644_heineken-lata-5-33cl.jpg', 'Cerveza refrescante y suave.', '2025-02-02 02:34:04', '2025-02-02 02:34:04'),
-(11, 'adg', 'adg', 'adg', 'adg', 'adg', 'adg', '2025-01-31', 3.00, '', 'adgadgagag', '2025-02-02 21:11:01', '2025-02-02 21:11:01');
+(10, 'Heineken', 'Heineken', 'Lager', 'Lata', '1/2', 'Cereales', '2025-02-22', 1.80, '../uploads/1738463644_heineken-lata-5-33cl.jpg', 'Cerveza refrescante y suave.', '2025-02-02 02:34:04', '2025-02-02 02:34:04');
 
 -- --------------------------------------------------------
 
@@ -76,7 +75,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `email`, `name`, `password`, `age`, `role`, `created_at`, `updated_at`) VALUES
 (1, 'admin@admin.com', 'Angel', '$2y$10$C8NXJ/h0r1g.xL3W9UwYhuEJhA15DST4OMiB9A8C0T7LGfNUK2s/2', 28, 'admin', '2025-01-29 21:47:32', '2025-02-02 22:37:13'),
-(2, 'usuario@usuario.com', 'Pepe', '$2y$10$2afG0FNHVblA7XPAM5GTJOEvM0cFoGo7Udvs72CZWRyVIDq.XwFES', 18, '', '2025-01-29 21:54:39', '2025-01-29 21:54:39');
+(2, 'usuario@usuario.com', 'Antonio', '$2y$10$2afG0FNHVblA7XPAM5GTJOEvM0cFoGo7Udvs72CZWRyVIDq.XwFES', 18, '', '2025-01-29 21:54:39', '2025-02-09 23:44:02'),
+(3, 'prueba@prueba.com', 'Prueba', '$2y$10$BKFwVLbIuenRjXlUoAE9u.Av3HZ2hr4DhmW.3CxrnrQ0vYmt0sK7i', 19, '', '2025-02-09 09:31:40', '2025-02-09 09:31:40');
 
 --
 -- Índices para tablas volcadas
@@ -109,7 +109,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
