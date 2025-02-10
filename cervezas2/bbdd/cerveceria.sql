@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 10-02-2025 a las 00:46:25
+-- Tiempo de generación: 10-02-2025 a las 22:45:46
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -48,9 +48,12 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `denominacion`, `marca`, `tipo`, `formato`, `tamaño`, `alergenos`, `fecha_consumo`, `precio`, `imagen`, `observaciones`, `created_at`, `updated_at`) VALUES
-(8, 'Chimai', 'Chimai', 'Trapense', 'Botellin', '1', 'cebada, etc, etc', '2025-02-02', 3.00, '../uploads/1738199694_cv.png', 'lorem lorem lorem', '2025-01-30 01:14:54', '2025-02-02 20:55:33'),
-(9, 'Pilsner Urquell', 'Pilsner Urquell', 'Pilsner', 'Botellin', '1', 'Cereales', '2025-01-24', 2.00, '../uploads/1738200513_cv2.png', 'adgadgadg', '2025-01-30 01:28:33', '2025-02-02 20:49:57'),
-(10, 'Heineken', 'Heineken', 'Lager', 'Lata', '1/2', 'Cereales', '2025-02-22', 1.80, '../uploads/1738463644_heineken-lata-5-33cl.jpg', 'Cerveza refrescante y suave.', '2025-02-02 02:34:04', '2025-02-02 02:34:04');
+(9, 'Pilsner Urquell', 'Pilsner Urquell', 'Pilsner', 'Botellin', '0', 'Cereales', '2025-01-24', 2.00, '../uploads/1738200513_cv2.png', 'adgadgadg', '2025-01-30 01:28:33', '2025-02-10 21:38:44'),
+(10, 'Heineken', 'Heineken', 'Lager', 'Lata', '1/2', 'Cereales', '2025-02-22', 1.80, '../uploads/1738463644_heineken-lata-5-33cl.jpg', 'Cerveza refrescante y suave.', '2025-02-02 02:34:04', '2025-02-02 02:34:04'),
+(12, 'Mahou', 'Mahou', 'Lager', 'Lata', '1/2', 'Cereales', '2025-03-02', 1.75, '../uploads/1739223507_mahou-clasica.jpg', ' Sabor equilibrado con un ligero toque amargo.', '2025-02-10 21:38:27', '2025-02-10 21:38:27'),
+(13, 'DAMM', 'damm', 'Lager', 'Botellin', '1/3', 'Cereales', '2025-03-07', 1.85, '../uploads/1739223655_606223.jpg', 'Cerveza mediterránea con un toque suave y refrescante.', '2025-02-10 21:40:55', '2025-02-10 21:40:55'),
+(14, 'Estrella Galicia', 'Estrella Galicia', 'Lager', 'Botellin', '1/3', 'Cereales', '2025-02-22', 1.90, '../uploads/1739223721_ic_estrella_galicia.png', 'Sabor más intenso con un amargor característico.', '2025-02-10 21:42:01', '2025-02-10 21:42:01'),
+(15, 'Alhambra', 'Alhambra', 'Lager', 'Lata', '1/2', 'Cereales', '2025-03-07', 2.00, '../uploads/1739223792_cerveza-alhambra-lata-33cl.jpg', 'Cerveza con cuerpo, ideal para paladares exigentes.', '2025-02-10 21:43:12', '2025-02-10 21:43:12');
 
 -- --------------------------------------------------------
 
@@ -103,7 +106,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
